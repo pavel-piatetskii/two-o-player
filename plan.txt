@@ -1,0 +1,42 @@
+Classes:
+
+	- Player
+
+		- variables: 
+			- name
+			- lives
+
+		- methods: 
+			- decrease live
+
+
+	- Question: 
+		- variables: 
+			- question text 
+			- answer
+
+		- methods: 
+			- generate question text and answer 
+			- compare input with answer (returns true/false)
+
+	- Game:
+		- variables: 
+			- players instances (array)
+			- current player index
+
+		- methods: 
+			- switch current player 
+			- play a round with a current player (ask a question and check an answer, decrease live count if the answer is incorrect) 
+			- check if current player ran out of lives
+
+The game flow is:
+1. Greeting
+2. Infinite while true loop:
+		a. create new question instance
+		b. print the "new turn" message and a question text
+		c. prompt for an answer
+		d. compare the answer with the correct one
+		e. decrease live if answer is wrong
+		f. if current player's lives = 0, break the loop
+		g. switch player
+3. Gameover message
